@@ -37,7 +37,12 @@ export default class JobsList extends React.Component {
   };
 
   getColor = ()=>{
-			return <FormattedMessage id="Encabezado"/>
+    if(navigator.language==="es"){
+      return  "thead-light" ;
+    }
+    else if(navigator.language==="en"){
+      return"thead-dark";
+  }
 	}
 
   render() {
